@@ -42,6 +42,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.STextBox1 = new System.Windows.Forms.TextBox();
+            this.btnUse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStop
@@ -118,6 +120,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.ForeColor = System.Drawing.Color.Black;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             resources.GetString("comboBox2.Items"),
@@ -126,6 +129,7 @@
             resources.GetString("comboBox2.Items3")});
             resources.ApplyResources(this.comboBox2, "comboBox2");
             this.comboBox2.Name = "comboBox2";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -141,11 +145,26 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // STextBox1
+            // 
+            resources.ApplyResources(this.STextBox1, "STextBox1");
+            this.STextBox1.Name = "STextBox1";
+            this.STextBox1.TextChanged += new System.EventHandler(this.STextBox1_TextChanged);
+            // 
+            // btnUse
+            // 
+            resources.ApplyResources(this.btnUse, "btnUse");
+            this.btnUse.Name = "btnUse";
+            this.btnUse.UseVisualStyleBackColor = true;
+            this.btnUse.Click += new System.EventHandler(this.btnUse_Click);
+            // 
             // apo
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Controls.Add(this.btnUse);
+            this.Controls.Add(this.STextBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox2);
@@ -179,6 +198,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox STextBox1;
+        private System.Windows.Forms.Button btnUse;
     }
 }
 

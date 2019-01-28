@@ -81,10 +81,43 @@ namespace Auto_power_off
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            textTimer.Text = timer.ToString();
             timer--;
             if (timer == 0)
                 timer1.Stop();
-             textTimer.Text= timer.ToString(); 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedIndex = comboBox2.SelectedIndex;
+            Object selectedItem = comboBox2.SelectedItem;
+        }
+
+        private void STextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btnUse_Click(object sender, EventArgs e)
+        {
+            if (timer == 0)
+            {
+                if (comboBox2.SelectedValue != null)
+                {
+                    if (comboBox2.SelectedValue == null)
+                    {
+                        MessageBox.Show(comboBox2.SelectedValue.ToString());
+                    }
+                    string vypnout = comboBox2.SelectedValue.ToString();
+
+                    if (comboBox2.SelectedValue == )
+                    {
+                        MessageBox.Show( "restartovat" );
+                    }
+                    string restartovat = comboBox2.SelectedValue.ToString();
+                }
+            }
         }
     }
 }
