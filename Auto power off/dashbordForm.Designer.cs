@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(apo));
             this.btnStop = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnStop
@@ -48,6 +50,7 @@
             resources.ApplyResources(this.btnStop, "btnStop");
             this.btnStop.Name = "btnStop";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click_1);
             // 
             // btnStart
             // 
@@ -88,7 +91,7 @@
             resources.ApplyResources(this.btnExit, "btnExit");
             this.btnExit.Name = "btnExit";
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.button3_Click);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSchovat
             // 
@@ -96,7 +99,7 @@
             resources.ApplyResources(this.btnSchovat, "btnSchovat");
             this.btnSchovat.Name = "btnSchovat";
             this.btnSchovat.UseVisualStyleBackColor = true;
-            this.btnSchovat.Click += new System.EventHandler(this.button4_Click);
+            this.btnSchovat.Click += new System.EventHandler(this.btnSchovat_Click);
             // 
             // textTime
             // 
@@ -108,8 +111,8 @@
             // 
             this.textTimer.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.textTimer.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textTimer.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.textTimer, "textTimer");
+            this.textTimer.ForeColor = System.Drawing.Color.Red;
             this.textTimer.Name = "textTimer";
             this.textTimer.TextChanged += new System.EventHandler(this.textTimer_TextChanged);
             // 
@@ -133,6 +136,10 @@
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // apo
             // 
@@ -171,6 +178,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
