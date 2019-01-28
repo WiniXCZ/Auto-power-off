@@ -111,7 +111,7 @@ namespace Auto_power_off
                     }
                     string vypnout = comboBox2.SelectedValue.ToString();
 
-                    if (comboBox2.SelectedValue == )
+                    if (comboBox2.SelectedValue == "restartovat")
                     {
                         MessageBox.Show( "restartovat" );
                     }
